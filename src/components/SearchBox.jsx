@@ -10,7 +10,7 @@ export default function SearchBox() {
     const handleSubmit = (event) => {
         event.preventDefault();
         setSearch(event.target.value);
-        router.push(`/search/${search}`);
+        // router.push(`/search/${search}`);
 
     }
 
@@ -18,7 +18,7 @@ export default function SearchBox() {
         <div>
             <form className="flex justify-center mt-10 gap-2">
             <input className="p-2 text-gray-500" type="text" placeholder="Search for ... " />
-            <button className="bg-amber-400 p-2 rounded-lg" type="submit" onClick={()=>handleSubmit(e)}>Search</button>
+            <button className="bg-amber-400 p-2 rounded-lg" type="submit" onClick={(event)=>handleSubmit(event)}>Search</button>
             </form>
         </div>
     )
