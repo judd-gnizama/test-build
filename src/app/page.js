@@ -12,7 +12,7 @@ export default async function Home() {
     var data = await res.json();
     var results = data.results;
   } else {
-    var results = null;
+    var results = res.status;
     // throw new Error('Failed to fetch data')
   }
 
@@ -20,8 +20,8 @@ export default async function Home() {
   return (
     <div className="flex flex-col justify-center">
       <SearchBox/>
-      <Results results={results}/>
       <p>{results}</p>
+      <Results results={results}/>
     
     </div>
   )
