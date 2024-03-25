@@ -7,7 +7,7 @@ export default function Results({results}) {
         {results && results.length > 0 ? (
             results.map((result) => <Card key={result.id} result={result}/>
             )
-        ): <div>No</div>}
+        ): <div>No Results Found.</div>}
     </div>
   )
 }

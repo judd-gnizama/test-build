@@ -7,12 +7,15 @@ export default async function Home() {
 
   const res = await fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}&language=en-US&page=1`);
 
+  const results = null;
+  
   if(!res.ok) {
-    throw new Error('Failed to fetch data')
+    // throw new Error('Failed to fetch data')
+  } else {
+    const data = await res.json();
+    const results = data.results;
   }
 
-  const data = await res.json();
-  const results = data.results;
 
   return (
     <div className="flex flex-col justify-center">
