@@ -9,7 +9,7 @@ export default async function Home() {
 
   
   if(!res.ok) {
-    const data = await res.json();
+    var data = await res.json();
     var results = data.results;
   } else {
     var results = null;
@@ -21,7 +21,7 @@ export default async function Home() {
     <div className="flex flex-col justify-center">
       <SearchBox/>
       <Results results={results}/>
-      <p>{res}</p>
+      <p>{data}</p>
     
     </div>
   )
