@@ -12,7 +12,7 @@ export default async function Home() {
     var data = await res.json();
     var results = data.results;
   } else {
-    var results = res.status;
+    var results = null;
     // throw new Error('Failed to fetch data')
   }
 
