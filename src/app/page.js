@@ -21,7 +21,7 @@ export default async function Home() {
     <div className="flex flex-col justify-center">
       <SearchBox/>
       <Results results={results}/>
-      <p>{data}</p>
+      <p>{results}</p>
     
     </div>
   )
