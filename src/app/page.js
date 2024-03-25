@@ -1,8 +1,11 @@
+import Results from "@/components/Results";
+import SearchBox from "@/components/SearchBox";
 
 export default function Home() {
   return (
     <div className="flex justify-center">
-      <h1 className="text-lg">Hello World!</h1>
+      <SearchBox/>
+      <Results/>
     </div>
   )
 }
