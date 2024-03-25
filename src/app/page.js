@@ -8,7 +8,7 @@ export default async function Home() {
   const res = await fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}&language=en-US&page=1`);
 
   
-  if(!res.ok) {
+  if(res.ok) {
     var data = await res.json();
     var results = data.results;
   } else {
