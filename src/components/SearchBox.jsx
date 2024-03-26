@@ -1,6 +1,6 @@
 'use client'
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function SearchBox() {
 
@@ -13,10 +13,29 @@ export default function SearchBox() {
     }
 
     return (
-        <div>
-            <form className="flex justify-center mt-10 gap-2">
-            <input className="p-2 text-gray-500" type="text" placeholder="Search for ... " onChange={(event)=> setSearch(event.target.value)}/>
-            <button className="bg-amber-400 p-2 rounded-lg" type="submit" onClick={(event)=>handleSubmit(event)}>Search</button>
+        <div className="w-full flex  justify-center items-center p-4">
+            <form className="flex flex-1 justify-center gap-2">
+                <select 
+                    name="select__category" 
+                    id="select__category" 
+                    placeholder="Filter"
+                    className="bg-amber-400 text-slate-800 p-2">
+                    <option value="1">All</option>
+                    <option value="2">Movies</option>
+                    <option value="3">TV Series</option>
+                    <option value="4">Keywords</option>
+                </select>
+                <input 
+                    type="text" 
+                    placeholder="Search for ... " 
+                    onChange={(event)=> setSearch(event.target.value)}
+                    className="p-2 text-gray-500 w-full" 
+                />
+                <button 
+                    type="submit" 
+                    onClick={(event)=>handleSubmit(event)}
+                    className="bg-amber-400 text-slate-800 font-bold p-2 px-4 rounded-lg" 
+                >Search</button>
             </form>
         </div>
     )
