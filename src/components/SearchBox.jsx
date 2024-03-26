@@ -36,7 +36,7 @@ export default function SearchBox() {
                         onChange={(event)=> setSearch(event.target.value)}
                         onSubmit={(event)=> handleSubmit(event)}
                         value={search}
-                        className="p-2 pr-10 text-gray-500 w-full rounded-md" 
+                        className="p-2 px-4 pr-10 text-gray-500 w-full rounded-md" 
                     />
                     <button
                         type='reset'

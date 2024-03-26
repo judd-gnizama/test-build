@@ -1,5 +1,4 @@
 import Results from "@/components/Results";
-import SearchBox from "@/components/SearchBox";
 
 const API_KEY = process.env.API_KEY;
 
