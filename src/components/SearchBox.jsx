@@ -8,8 +8,13 @@ export default function SearchBox() {
     const router = useRouter();
 
     const handleSubmit = (event) => {
-        event.preventDefault();
+        console.log(search)
         router.push(`/search/${search}`);
+        event.preventDefault();
+    }
+
+    const handleCancel = () => {
+        setSearch('');
     }
 
     return (
@@ -30,11 +35,15 @@ export default function SearchBox() {
                         type="text" 
                         placeholder="Search for ... " 
                         onChange={(event)=> setSearch(event.target.value)}
+                        onSubmit={(event)=> handleSubmit(event)}
+                        value={search}
                         className="p-2 pr-10 text-gray-500 w-full" 
                     />
                     <button
+                        type='reset'
                         className="material-symbols-outlined absolute text-black right-2 cursor-pointer disabled:hidden"
                         disabled={search===''}
+                        onClick={handleCancel}
                     >
                     cancel</button>
                 </div>
