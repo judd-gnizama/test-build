@@ -7,7 +7,7 @@ export default function Results({results}) {
         {results && results.length > 0 ? (
             results.map((result) => <Card key={result.id} result={result}/>
             )
-        ): <div>No Results Found.</div>}
+        ): <h1 className="text-3xl">No Results Found.</h1>}
     </div>
   )
 }

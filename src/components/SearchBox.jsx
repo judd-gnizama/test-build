@@ -18,8 +18,8 @@ export default function SearchBox() {
     }
 
     return (
-        <div className="w-full flex  justify-center items-center p-12">
-            <form className="max-sm:grid flex flex-1 max-w-6xl justify-center items-center gap-2 text-xl">
+        <div className="w-full flex  justify-center items-center p-4 py-12">
+            <form className="max-sm:grid flex flex-1 max-w-6xl items-center gap-2 text-xl">
                 {/* <select 
                     name="select__category" 
                     id="select__category" 
@@ -36,11 +36,11 @@ export default function SearchBox() {
                         onChange={(event)=> setSearch(event.target.value)}
                         onSubmit={(event)=> handleSubmit(event)}
                         value={search}
-                        className="p-2 pr-10 text-gray-500 w-full" 
+                        className="p-2 pr-10 text-gray-500 w-full rounded-md" 
                     />
                     <button
                         type='reset'
-                        className="material-symbols-outlined absolute text-black right-2 cursor-pointer disabled:hidden"
+                        className="material-symbols-outlined absolute text-black right-2 cursor-pointer disabled:hidden flex hover:text-red-600"
                         disabled={search===''}
                         onClick={handleCancel}
                     >
@@ -49,7 +49,7 @@ export default function SearchBox() {
                 <button 
                     type="submit" 
                     onClick={(event)=>handleSubmit(event)}
-                    className="bg-amber-400 text-slate-800 font-bold p-2 px-4 rounded-lg disabled:text-slate-300 disabled:bg-slate-400" 
+                    className="bg-amber-400 text-slate-800 font-bold p-2 px-4 rounded-lg disabled:text-slate-300 disabled:bg-slate-400 hover:bg-amber-200" 
                     disabled={search===''}
                 >Search</button>
             </form>
