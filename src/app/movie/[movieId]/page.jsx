@@ -45,7 +45,7 @@ export default async function MoviePage({ params }) {
           </p>
           <p>
             <strong>Rating:</strong>
-            <Ratings/>
+            <Ratings movie={movie}/>
           </p>
           
           <p>

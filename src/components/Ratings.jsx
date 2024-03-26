@@ -1,8 +1,26 @@
 
-export default function Ratings() {
+export default function Ratings({ movie }) {
+
   return (
-    <div>
-        Ratings
+    <div className="flex gap-4 text-xl max-sm:flex-wrap">
+        <div className="flex gap-1">
+            <span class="material-symbols-outlined">keyboard_double_arrow_up</span>
+            {`${movie.popularity}%`}
+        </div>
+        <div className="flex gap-1">
+            <span class="material-symbols-outlined">star</span>
+            {movie.vote_average}
+        </div>
+        <div className="flex gap-1">
+            <span class="material-symbols-outlined">thumb_up</span>
+            {movie.vote_count}
+
+        </div>
+        <div className="flex gap-1">
+            <span class="material-symbols-outlined">paid</span>
+            {movie.revenue}
+        </div>
+        
     </div>
   )
 }
