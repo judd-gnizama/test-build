@@ -5,10 +5,10 @@ import { useState } from "react";
 export default function SearchBox() {
 
     const [ search , setSearch ]  = useState('');
+    // const [ category, setCategory ] = useState(1);
     const router = useRouter();
 
     const handleSubmit = (event) => {
-        console.log(search)
         router.push(`/search/${search}`);
         event.preventDefault();
     }
@@ -18,9 +18,9 @@ export default function SearchBox() {
     }
 
     return (
-        <div className="w-full flex  justify-center items-center p-4">
+        <div className="w-full flex  justify-center items-center p-12">
             <form className="max-sm:grid flex flex-1 max-w-6xl justify-center items-center gap-2 text-xl">
-                <select 
+                {/* <select 
                     name="select__category" 
                     id="select__category" 
                     placeholder="Filter"
@@ -28,8 +28,7 @@ export default function SearchBox() {
                     <option value="1">All</option>
                     <option value="2">Movies</option>
                     <option value="3">TV Series</option>
-                    <option value="4">Keywords</option>
-                </select>
+                </select> */}
                 <div className="flex items-center flex-1 relative">
                     <input 
                         type="text" 
