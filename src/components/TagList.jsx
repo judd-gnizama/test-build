@@ -18,17 +18,11 @@ export default async function TagList({ movie, genre_ids }) {
         }
 
         if (genreList && genre_ids) {
-            console.log(genreList,'list')
-            console.log(genre_ids, 'ids')
             var genres = genreList.filter((genre)=>genre_ids.includes(genre.id))
         } else {
             var genres = null;
         }
     }
-
-
-    console.log(genres)
-
 
   return (
     <div className="flex flex-wrap gap-2 py-2">
