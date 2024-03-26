@@ -1,12 +1,9 @@
 
-export default function Ratings({ movie }) {
+export default function Ratings({ movie, wide }) {
 
   return (
-    <div className="flex gap-4 text-xl max-sm:flex-wrap">
-        <div className="flex gap-1">
-            <span class="material-symbols-outlined">keyboard_double_arrow_up</span>
-            {`${movie.popularity}%`}
-        </div>
+    <div className="flex gap-4 text-lg max-sm:flex-wrap">
+        
         <div className="flex gap-1">
             <span class="material-symbols-outlined">star</span>
             {movie.vote_average}
@@ -16,10 +13,20 @@ export default function Ratings({ movie }) {
             {movie.vote_count}
 
         </div>
-        <div className="flex gap-1">
-            <span class="material-symbols-outlined">paid</span>
-            {movie.revenue}
-        </div>
+        
+        {wide === "true" && 
+        <>
+            <div className="flex gap-1">
+                <span class="material-symbols-outlined">keyboard_double_arrow_up</span>
+                {`${movie.popularity}`}
+            </div>
+            <div className="flex gap-1">
+                <span class="material-symbols-outlined">paid</span>
+                {movie.revenue}
+            </div>        
+        </>
+        }
+        
         
     </div>
   )

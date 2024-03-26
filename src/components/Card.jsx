@@ -1,9 +1,10 @@
 import Link from "next/link";
 import Image from 'next/image';
-
-const API_KEY = process.env.API_KEY;
+import Ratings from "./Ratings";
+import TagList from "./TagList";
 
 export default function Card({ result }) {
+  console.log(result)
   return (
     <Link
         className=" border rounded-md p-4 flex flex-col gap-4 hover:bg-amber-800 transition-all duration-300 overflow-hidden"
@@ -34,6 +35,8 @@ export default function Card({ result }) {
           <h2 className=" text-lg font-bold text-amber-300">{result.name || result.title}</h2>
           <p className="line-clamp-2">{result.overview || "No Description Available"}</p>
         </article>
+        <Ratings movie={result} wide="false"/>
+        <TagList genre_ids={result.genre_ids}/>
     </Link>
   )
 }

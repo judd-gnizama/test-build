@@ -45,7 +45,7 @@ export default async function MoviePage({ params }) {
           </p>
           <p className=' inline-flex gap-4 place-items-center'>
             <strong>Rating:</strong>
-            <Ratings movie={movie}/>
+            <Ratings movie={movie} wide="true"/>
           </p>
           
           <p className=' inline-flex gap-4 place-items-center'>
