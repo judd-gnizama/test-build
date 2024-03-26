@@ -14,7 +14,7 @@ export default async function MoviePage({ params }) {
     const movie = await res.json();
 
   return (
-    <div className="flex flex-col justify-center items-center text-lg gap-4 p-4 mx-auto max-w-6xl">
+    <div className="flex flex-col justify-center text-lg gap-4 p-4 mx-auto max-w-6xl">
       {movie.backdrop_path || movie.poster_path ? 
         <Image
         width={500}
@@ -43,15 +43,14 @@ export default async function MoviePage({ params }) {
             <br/>
             {movie.overview || "No Description Available"}
           </p>
-          <p>
+          <p className=' inline-flex gap-4 place-items-center'>
             <strong>Rating:</strong>
             <Ratings movie={movie}/>
           </p>
           
-          <p>
+          <p className=' inline-flex gap-4 place-items-center'>
             <strong>Tags:</strong>
-            <br/>
-            <TagList/>
+            <TagList movie={movie}/>
           </p>
         </article>
     </div>
