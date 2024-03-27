@@ -31,7 +31,7 @@ body {
   height: 100vh;
   display: grid;
   grid-template-rows: auto auto 1fr auto;
-  min-width: 400px;
+  min-width: min-content;
 }
 
 body > :nth-child(1) {
