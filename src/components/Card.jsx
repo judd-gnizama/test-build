@@ -4,7 +4,6 @@ import Ratings from "./Ratings";
 import TagList from "./TagList";
 
 export default function Card({ result }) {
-  console.log(result)
   return (
     <Link
         className=" border rounded-md p-4 flex flex-col gap-4 hover:bg-amber-800 transition-all duration-300 overflow-hidden"

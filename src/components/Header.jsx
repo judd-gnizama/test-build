@@ -9,8 +9,8 @@ const Header = () => {
         href='/'
         className="text-3xl font-bold bg-amber-500 text-gray-800 p-2 px-4 rounded-lg cursor-pointer">MovieRef</Link>
         <ul className="flex gap-4 text-xl">
-            <li className="cursor-pointer hover:text-amber-400">Home</li>
-            <li className="cursor-pointer hover:text-amber-400">About</li>
+            <Link className="cursor-pointer hover:text-amber-400" href="/">Home</Link>
+            <Link className="cursor-pointer hover:text-amber-400" href="/about">About</Link>
             {/* <li className="cursor-pointer hover:text-amber-400">Favorites</li> */}
         </ul>
     </div>
