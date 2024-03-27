@@ -34,7 +34,6 @@ body {
   min-width: 400px;
 }
 
-
 body > :nth-child(1) {
   grid-row: 1;
 }
