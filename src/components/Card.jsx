@@ -6,7 +6,7 @@ import TagList from "./TagList";
 export default function Card({ result }) {
   return (
     <Link
-        className=" border rounded-md p-4 flex flex-col gap-4 hover:bg-amber-800 transition-all duration-300 overflow-hidden"
+        className=" border rounded-md p-4 flex flex-col gap-4 hover:bg-amber-800 transition-opacity duration-300 overflow-hidden"
         href={`/movie/${result.id}`}>
         
         {result.backdrop_path || result.poster_path ? 
